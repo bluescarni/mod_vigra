@@ -16,6 +16,7 @@ add_subdirectory(deps/array)
 add_subdirectory(deps/array_io)
 
 add_library(vigra src/vigra.cpp)
+target_link_libraries(vigra array array_io)
 
 target_include_directories(vigra PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
