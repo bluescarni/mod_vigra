@@ -7,13 +7,8 @@ project(vigra VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/mod_cmake")
 include(ModularDeps)
 
-set(DEP_NAME )
-set(DEP_REPO )
-
 add_dependency("array" "https://github.com/bluescarni/mod_array.git")
 add_dependency("array_io" "https://github.com/bluescarni/mod_array_io.git")
-add_subdirectory(deps/array)
-add_subdirectory(deps/array_io)
 
 add_library(vigra src/vigra.cpp)
 target_link_libraries(vigra array array_io)
